@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Validação do ciclo de ar-condicionado — resultado</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F4F1EC;
+    --ink:#161512;
+    --mute:#65605A;
+    --line:#D8D2C8;
+    --card:#FBF9F5;
+    --coral:#EB615E;
+    --verde:#2F7A5B;
+    --verde-bg:#E4EEE7;
+    --ambar:#B4761A;
+    --ambar-bg:#F1E7D0;
+    --coral-bg:#F6DEDD;
+    --azul:#2A4A6B;
+  }
+  *{box-sizing:border-box;margin:0}
+  html,body{background:var(--bg);color:var(--ink);font:400 15.5px/1.55 'IBM Plex Sans',system-ui,sans-serif}
+  main{max-width:960px;margin:0 auto;padding:56px 24px 72px}
+
+  .head{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:36px}
+  .kicker{font:500 11px/1 'IBM Plex Sans';letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
+  h1{font:700 40px/1.05 'Fraunces';letter-spacing:-.015em;margin:10px 0 14px}
+  .sub{color:var(--mute);font-size:14.5px;max-width:640px}
+  .meta{display:flex;gap:20px;margin-top:18px;font-size:12.5px;color:var(--mute);flex-wrap:wrap}
+  .meta b{color:var(--ink);font-weight:600}
+
+  .placar{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:44px}
+  .placar>div{background:var(--card);padding:18px 20px}
+  .placar .n{font:700 34px/1 'Fraunces';color:var(--ink)}
+  .placar .n.ok{color:var(--verde)}
+  .placar .n.aberto{color:var(--ambar)}
+  .placar .lbl{font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.08em;margin-top:6px}
+
+  h2{font:600 22px/1.2 'Fraunces';margin:36px 0 4px;padding-top:28px;border-top:1px solid var(--line)}
+  h2 .cifra{font:500 13px/1 'IBM Plex Sans';color:var(--mute);margin-left:10px;letter-spacing:.03em}
+  h2:first-of-type{border-top:0;padding-top:0}
+
+  .lista{margin-top:18px}
+  .item{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .item:last-child{border-bottom:0}
+  .item .tag{align-self:start;font:500 11px/1 'IBM Plex Sans';letter-spacing:.06em;text-transform:uppercase;padding:5px 9px;border-radius:2px;white-space:nowrap;display:inline-block}
+  .tag.ok{background:var(--verde-bg);color:var(--verde)}
+  .tag.aberto{background:var(--ambar-bg);color:var(--ambar)}
+  .item .titulo{font-weight:600;font-size:15.5px;margin-bottom:4px}
+  .item .detalhe{color:var(--mute);font-size:14px}
+  .item .fonte{margin-top:6px;font-size:12.5px;color:var(--mute);font-style:italic}
+
+  .nota{background:var(--card);border-left:3px solid var(--coral);padding:14px 18px;margin:32px 0 0;font-size:14px;color:var(--ink)}
+  .nota b{font-weight:600}
+
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--mute);font-size:12.5px}
+
+  @media(max-width:640px){
+    main{padding:36px 18px 56px}
+    h1{font-size:32px}
+    .placar{grid-template-columns:1fr}
+    .item{grid-template-columns:1fr;gap:8px}
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header class="head">
+  <div class="kicker">Manutenção recorrente · 1º ciclo · ar-condicionado</div>
+  <h1>Validação do ciclo — resultado</h1>
+  <p class="sub">Conferência das inconformidades apontadas em 30/09 contra os documentos de 30/09: canvas do processo v2.3 e finalização v2.3.</p>
+  <div class="meta">
+    <span><b>Referência</b> validação Ray 30/09</span>
+    <span><b>Fontes</b> 1-canvas-processo-recorrente.html · 2-finalizacao-recorrente.html</span>
+    <span><b>Disparo</b> qua 30/09, 23h</span>
+  </div>
+</header>
+
+<section class="placar">
+  <div><div class="n ok">21</div><div class="lbl">resolvidos</div></div>
+  <div><div class="n aberto">3</div><div class="lbl">em aberto (operacional)</div></div>
+  <div><div class="n">0</div><div class="lbl">divergências não endereçadas</div></div>
+</section>
+
+<h2>Em aberto <span class="cifra">3 · operacionais, todos com janela até o disparo</span></h2>
+<div class="lista">
+
+  <div class="item">
+    <span class="tag aberto">a fazer</span>
+    <div>
+      <div class="titulo">Ativar a regra id 2 "Ar-condicionado · Higienização" em produção</div>
+      <div class="detalhe">Estava em rascunho na conferência das 13h23. Precisa sair de rascunho antes das 22h45, quando começam as três contagens de validação.</div>
+      <div class="fonte">Canvas §11 · Finalização, tabela de entradas</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <span class="tag aberto">a promover</span>
+    <div>
+      <div class="titulo">Subir o PR #5023 (texto da evidência) para produção</div>
+      <div class="detalhe">Na develop às 16h26 de 30/09. Sem esse PR, o card nasce sem as três opções de evidência decididas com o Vinicius.</div>
+      <div class="fonte">Canvas §7.1</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <span class="tag aberto">ajuste no doc</span>
+    <div>
+      <div class="titulo">Nomear "Vinicius" na tabela de saídas do 2-finalizacao</div>
+      <div class="detalhe">Hoje aparece só como "Manutenção". O canvas já traz o nome no §3 e §14; convém alinhar a finalização.</div>
+      <div class="fonte">Finalização §4</div>
+    </div>
+  </div>
+
+</div>
+
+<h2>Resolvidos <span class="cifra">21 · agrupados por bloco</span></h2>
+
+<h3 style="font:500 13px/1 'IBM Plex Sans';letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:26px 0 0">Bloqueios de disparo</h3>
+<div class="lista">
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Ajustes de código 1 e 4 em produção</div>
+      <div class="detalhe">PR #4967 promovido pela #4976. Disparo abre pelo calendário e card nasce com prazo de 22/10 e instrução da evidência.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Split excluído · regra única do ar-condicionado</div>
+      <div class="detalhe">Só existe a regra id 2. As outras 16 regras foram excluídas em 28/09.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Faixa aceitável 1.050 a 1.250, com 3 contagens</div>
+      <div class="detalhe">Substituiu a meta de "perto de 1.100". Contagem 30/09 às 13h23: 1.147.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Limite de 500 cards no quadro</div>
+      <div class="detalhe">Não vale mais para a coluna recorrente (front #3592, versão 1.143.3 em produção).</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Texto da evidência</div>
+      <div class="detalhe">Foto de cada aparelho aberto <b>ou</b> foto do serviço feito <b>ou</b> nota/recibo/OS do prestador (decisão do Vinicius, 30/09).</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Registro em ata das mudanças em relação ao v2.1</div>
+      <div class="detalhe">Canvas §14 registra 17 pontos com aprovador e data.</div>
+    </div>
+  </div>
+</div>
+
+<h3 style="font:500 13px/1 'IBM Plex Sans';letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:32px 0 0">Divergências com o v2.1</h3>
+<div class="lista">
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Abertura na quinta 01/10</div>
+      <div class="detalhe">Exceção do 1º ciclo, aprovada pelo Vinicius em 30/09. Do 2º ciclo em diante, outubro passa a ser o mês do ar-condicionado.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Comunicação sem reforço de quinta e alerta de sábado</div>
+      <div class="detalhe">Comunicado ter 29/09 + lembrete qua 30/09. Confirmado por WhatsApp pelo Vinicius em 30/09.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Filtro do exaustor, dedetização e caixa d'água adiados</div>
+      <div class="detalhe">Fora do 1º ciclo. Aviso às franquias de que dedetização e caixa d'água não abrem em 05/10 fica para depois.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Agentes de IA finalizando cards sozinhos</div>
+      <div class="detalhe">Validador + auditor em produção, aprovados pela Coordenação em 30/09. Card com dúvida vai para uma pessoa.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Devolução da evidência</div>
+      <div class="detalhe">Card volta para a coluna Recorrente com o motivo e o prazo original mantido. Substitui o "Programada" do v2.1.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">SLA de validação estourado</div>
+      <div class="detalhe">Relógio da franquia não congela. Quem atrasar ajusta o prazo daquele card à mão.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Fechamento por despesa</div>
+      <div class="detalhe">Vale "só na abertura". Depois, agentes de evidência ou uma pessoa finalizam. Agente "Despesa prova o card" segue desligado.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Depois do D+21</div>
+      <div class="detalhe">Lembrete se repete a cada 7 dias. Sem dono novo: o atraso conta no lead time da franquia.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Dono do processo</div>
+      <div class="detalhe">Vinicius Satores (Manutenção), dono de toda a manutenção desde 23/09.</div>
+    </div>
+  </div>
+</div>
+
+<h3 style="font:500 13px/1 'IBM Plex Sans';letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:32px 0 0">Correções pedidas no HTML do ciclo</h3>
+<div class="lista">
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Calendário anual completo</div>
+      <div class="detalhe">Outubro aparece com o ar-condicionado. Dedetização, caixa d'água e filtro de água ficam para quando esses itens forem discutidos (texto explícito na finalização §3).</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Ação para o bloqueio dez–mar</div>
+      <div class="detalhe">Pausar as regras não é obrigatório: só abre card quem dispara. Cobrança semanal e régua de atraso continuam nos cards ainda abertos, inclusive no bloqueio.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Próximo ciclo agendado para outubro/2027</div>
+      <div class="detalhe">Sistema agenda para 12 meses depois da abertura: 01/10/2027.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Onde o prazo começa a contar</div>
+      <div class="detalhe">Conta a partir de 01/10 (dia do disparo, 30/09, não conta), desconta 12/10, cai em qui 22/10. Feriado estadual ou municipal fica fora, de propósito.</div>
+    </div>
+  </div>
+  <div class="item">
+    <span class="tag ok">resolvido</span>
+    <div>
+      <div class="titulo">Capacidade de validação no pico 19–23/10</div>
+      <div class="detalhe">Estimativa de 250 a 300 cards que os agentes não fecham; Vinicius revisa em lote pelo Claude. Qualidade do validador acompanhada nos primeiros cards.</div>
+    </div>
+  </div>
+</div>
+
+<div class="nota">
+  <b>Divergência de data que veio da própria correção.</b> A análise falava em prazo 23/10 e retros em 30/10, 06/11 e 13/11. Como o disparo passou para as 23h de 30/09 (e não 01/10), o dia 01/10 conta como 1º dia útil e o prazo cai em <b>22/10</b>. As datas do ciclo mudaram junto: D+7 em 29/10, D+14 em 05/11, D+21 em 12/11.
+</div>
+
+<footer>
+  Referências: 1-canvas-processo-recorrente.html (v2.3, 30/09/2026, §11 e §14) · 2-finalizacao-recorrente.html (v2.3, 30/09/2026, §1, §4 e §5). Fonte de verdade sobre estado do sistema: API de produção do Sapron em 30/09/2026, 13h23 (16h23 UTC).
+</footer>
+
+</main>
+</body>
+</html>
