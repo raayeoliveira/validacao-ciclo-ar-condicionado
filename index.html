@@ -54,16 +54,42 @@
     position: relative;
     overflow: hidden;
   }
-  .hero-shape {
+  .hero-shape-bg {
     position: absolute;
     right: -80px;
     top: -60px;
     width: 380px;
-    opacity: 0.10;
+    opacity: 0.08;
     pointer-events: none;
   }
-  .hero-shape svg { width: 100%; height: auto; display: block; }
+  .hero-shape-bg svg { width: 100%; height: auto; display: block; }
   .hero-inner { max-width: 960px; margin: 0 auto; position: relative; z-index: 1; }
+  .logo-lockup {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 44px;
+  }
+  .logo-lockup svg { width: 34px; height: auto; display: block; }
+  .logo-lockup .wordmark {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: var(--surface);
+  }
+  .logo-lockup .divider {
+    width: 1px;
+    height: 20px;
+    background: oklch(0.42 0.10 250);
+  }
+  .logo-lockup .unit {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: oklch(0.75 0.06 250);
+  }
   .hero .kicker { color: oklch(0.75 0.06 250); margin-bottom: 28px; }
 
   .hero h1 {
@@ -261,10 +287,16 @@
 <body>
 
 <section class="hero">
-  <div class="hero-shape">
+  <div class="hero-shape-bg">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 564 575" fill="none"><path d="M543.226 178.172L442.93 119.392C443.194 117.952 443.72 116.643 443.72 115.203V26.5752C443.72 11.913 431.743 0 417.001 0H363.562C348.821 0 336.843 11.913 336.843 26.5752V57.6015L300.516 36.3936C285.774 27.6225 266.294 29.0626 252.605 39.1428C252.342 39.2737 252.079 39.2737 251.947 39.4046L20.951 172.543C1.73419 183.932 -6.29474 210.507 5.55122 230.406C17.9237 251.09 45.301 256.588 64.5178 245.199L78.3381 237.213C62.017 269.025 51.7505 305.026 51.7505 344.169C51.7505 406.221 75.7056 467.226 119.799 511.344C137.173 528.624 157.443 543.156 179.555 553.759C196.666 562.007 214.567 568.814 233.257 572.218C258.002 576.669 283.8 574.444 308.808 574.444C335.922 574.444 363.036 574.444 390.018 574.444C414.5 574.444 439.113 574.575 463.99 574.575C470.176 574.575 476.231 573.004 481.759 570.254C488.866 566.72 492.947 562.792 497.685 556.509C502.95 549.57 506.635 541.061 506.635 532.159V252.923C525.062 259.599 547.306 253.839 558.363 235.511C570.34 215.613 562.311 189.038 542.963 177.648L543.226 178.172ZM427.794 348.751C427.794 433.582 370.012 502.573 282.878 502.573C195.745 502.573 131.777 429.131 131.777 344.3C131.777 259.468 195.745 188.776 282.878 188.776C370.012 188.776 427.794 254.232 427.794 338.147V348.751Z" fill="#EB615E"></path></svg>
   </div>
   <div class="hero-inner">
+    <div class="logo-lockup">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 564 575" fill="none" aria-label="Seazone"><path d="M543.226 178.172L442.93 119.392C443.194 117.952 443.72 116.643 443.72 115.203V26.5752C443.72 11.913 431.743 0 417.001 0H363.562C348.821 0 336.843 11.913 336.843 26.5752V57.6015L300.516 36.3936C285.774 27.6225 266.294 29.0626 252.605 39.1428C252.342 39.2737 252.079 39.2737 251.947 39.4046L20.951 172.543C1.73419 183.932 -6.29474 210.507 5.55122 230.406C17.9237 251.09 45.301 256.588 64.5178 245.199L78.3381 237.213C62.017 269.025 51.7505 305.026 51.7505 344.169C51.7505 406.221 75.7056 467.226 119.799 511.344C137.173 528.624 157.443 543.156 179.555 553.759C196.666 562.007 214.567 568.814 233.257 572.218C258.002 576.669 283.8 574.444 308.808 574.444C335.922 574.444 363.036 574.444 390.018 574.444C414.5 574.444 439.113 574.575 463.99 574.575C470.176 574.575 476.231 573.004 481.759 570.254C488.866 566.72 492.947 562.792 497.685 556.509C502.95 549.57 506.635 541.061 506.635 532.159V252.923C525.062 259.599 547.306 253.839 558.363 235.511C570.34 215.613 562.311 189.038 542.963 177.648L543.226 178.172ZM427.794 348.751C427.794 433.582 370.012 502.573 282.878 502.573C195.745 502.573 131.777 429.131 131.777 344.3C131.777 259.468 195.745 188.776 282.878 188.776C370.012 188.776 427.794 254.232 427.794 338.147V348.751Z" fill="#EB615E"></path></svg>
+      <span class="wordmark">Seazone</span>
+      <span class="divider"></span>
+      <span class="unit">BackOffice Franquias</span>
+    </div>
     <div class="kicker">Manutenção recorrente · 1º ciclo · ar-condicionado</div>
     <h1>Validação do ciclo <em>— resultado</em></h1>
     <p class="hero-lede">Conferência das inconformidades apontadas em 30/09 contra os documentos publicados no mesmo dia: canvas do processo v2.3 e finalização v2.3.</p>
